@@ -21,4 +21,57 @@ a{
     font-weight:700;
     cursor:pointer;
     text-decoration:none;
+    position:relative;
+    overflow:hidden;
+    z-index:3;
+    transition:.3s;
+}
+
+span{
+    z-index:3;
+    transition:.3s;
+}
+
+a::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:0;
+    height:50%;
+    background-color:black;
+    z-index:-2;
+    pointer-events:none;
+    transition:.3s;
+    transition-timing-function:linear;
+}
+
+a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:0;
+    height:50%;
+    background-color:black;
+    z-index:-2;
+    pointer-events:none;
+    transition:.3s;
+    transition-timing-function:linear;
+}
+
+a:hover::after{
+    width:100%;
+}
+
+a:hover::before{
+    width:100%;
+}
+
+a:hover span{
+    color:red;
+}
+
+a:hover{
+    box-shadow:5px 7px 20px red;
 }
