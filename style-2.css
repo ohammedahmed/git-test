@@ -9,8 +9,10 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
+    background-color:rgb(110, 110, 110);
 }
 
 h1{
-    color:red;
+    color:black;
+    text-shadow:20px -30px 3px rgb(65, 64, 64);
 }
