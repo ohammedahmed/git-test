@@ -30,6 +30,8 @@ a{
 span{
     z-index:3;
     transition:.5s;
+    text-transform:uppercase;
+    letter-spacing:3px;
 }
 
 a::before{
